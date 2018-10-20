@@ -5,10 +5,15 @@ $("#search-button").on('click', runSearch);
 $("#clear-button").on('click', clearSearchFields);
 
 function runSearch() {
+
+	event.preventDefault();
+
 	var searchTerm = $("#search-term");
 	var numberOfRecords = $("#number-of-records");
 	var startYear = $("#start-year");
 	var endYear = $("#end-year");
+
+	console.log("Searching...");
 
 	// Built by LucyBot. www.lucybot.com
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
